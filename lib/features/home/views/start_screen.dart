@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/common/utils/helpers.dart';
-import 'package:shop_app/features/home/views/home_page.dart';
+import 'package:shop_app/common/utils/helper.dart';
+import 'package:shop_app/features/auth/views/auth_screen.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
@@ -15,7 +15,7 @@ class StartScreen extends StatelessWidget {
         children: [
           InkWell(
             onTap: () {
-              navigateTo(context, HomeView());
+              navigateTo(context, AuthScreen());
             },
             child: Container(
               height: MediaQuery.of(context).size.height,

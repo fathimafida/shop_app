@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
-void navigateTo(BuildContext context, Widget widget) {
+void navigateTo(context, widget) {
   Navigator.push(context, MaterialPageRoute(builder: (context) => widget));
 }

@@ -1,67 +1,71 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/common/utils/helpers.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:shop_app/common/models/product.dart';
+import 'package:shop_app/common/utils/helper.dart';
 import 'package:shop_app/features/detailPage/view/product_detail_page.dart';
 
 class TrendCard extends StatelessWidget {
   const TrendCard({
-    super.key,
-  });
+    Key? key,
+    required this.product,
+  }) : super(key: key);
+
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
-    return SliverPadding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
-      sliver: SliverGrid(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 20,
-          mainAxisSpacing: 20,
+    return InkWell(
+      onTap: () {
+        navigateTo(
+            context,
+            ProductDetailPage(
+              product: product,
+            ));
+      },
+      child: Card(
+        elevation: 5,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
         ),
-        delegate: SliverChildBuilderDelegate(
-          (BuildContext context, int index) {
-            return Stack(
-              alignment: Alignment.bottomCenter,
-              children: [
-                InkWell(
-                  onTap: () {
-                    navigateTo(context, ProductDetailPage());
-                  },
-                  child: Container(
-                    height: 200,
-                    width: 160,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      image: DecorationImage(
-                          image: AssetImage("assets/images/saree.jpg"),
-                          fit: BoxFit.cover),
-                    ),
-                  ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 400,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+                image: DecorationImage(
+                  image: NetworkImage(product.image),
+                  fit: BoxFit.fill,
                 ),
-                Container(
-                  padding: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(15),
-                      topRight: Radius.circular(15),
-                      bottomLeft: Radius.circular(3),
-                      bottomRight: Radius.circular(3),
-                    ),
-                  ),
-                  child: Text(
-                    '\$1090',
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "\$${product.price}",
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                       fontSize: 15,
                     ),
-                    textAlign: TextAlign.center,
                   ),
-                ),
-              ],
-            );
-          },
-          childCount: 8,
+                  SizedBox(height: 5),
+                  Text(
+                    product.title,
+                    style: GoogleFonts.mooli(
+                      color: Colors.black,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
