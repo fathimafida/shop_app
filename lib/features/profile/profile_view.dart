@@ -24,7 +24,7 @@ class ProfileView extends StatelessWidget {
                   height: 10,
                 ),
                 Text("Fathima fida"),
-                Text("fida@gmail.com"),
+                Text("20mcs@gmail.com"),
               ],
             ),
           ),
@@ -32,6 +32,7 @@ class ProfileView extends StatelessWidget {
             height: 100,
           ),
           ListTile(
+            onTap: () {},
             title: Text("Settings"),
             leading: Icon(Icons.settings),
             trailing: Icon(
@@ -47,6 +48,14 @@ class ProfileView extends StatelessWidget {
               size: 20,
             ),
           ),
+          ListTile(
+            title: Text("About"),
+            leading: Icon(Icons.info),
+            trailing: Icon(
+              Icons.arrow_forward_ios,
+              size: 20,
+            ),
+          )
         ],
       ),
     ));
