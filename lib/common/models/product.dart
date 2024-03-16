@@ -33,7 +33,7 @@ class Product {
     final _data = <String, dynamic>{};
     _data['id'] = id;
     _data['title'] = title;
-    _data['price'] = price; // No change needed here
+    _data['price'] = price;
     _data['description'] = description;
     _data['category'] = category;
     _data['image'] = image;
