@@ -23,7 +23,7 @@ class HomeCubit extends Cubit<HomeState> {
         categoryList.add(CategoryItem.fromJson(category));
       }
       emit(HomeLoaded(categoryList, productList));
-    } catch (e) {
+    } on DioException catch (e) {
       print(e);
       emit(HomeError(e.toString()));
     }

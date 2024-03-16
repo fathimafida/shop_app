@@ -12,6 +12,7 @@ class RegisterScreen extends StatelessWidget {
     final _userController = TextEditingController();
     final _formKey = GlobalKey<FormState>();
     return Scaffold(
+      appBar: AppBar(),
       body: Form(
         key: _formKey,
         child: SafeArea(
@@ -99,7 +100,11 @@ class RegisterScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 30),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          if (_formKey.currentState!.validate()) {
+                            Navigator.pushNamed(context, "/home");
+                          }
+                        },
                         child: Text(
                           "Sign up",
                           style: GoogleFonts.mooli(
