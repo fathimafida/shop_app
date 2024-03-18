@@ -18,6 +18,12 @@ class OrderView extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text("Order"),
             )),
+        ListTile(
+          title: Text("orderssss"),
+        ),
+        CircleAvatar(
+          radius: 80,
+        )
       ],
     ));
   }

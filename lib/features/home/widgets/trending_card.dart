@@ -50,7 +50,7 @@ class TrendCard extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
-                      fontSize: 15,
+                      fontSize: 16,
                     ),
                   ),
                   SizedBox(height: 5),
@@ -58,7 +58,7 @@ class TrendCard extends StatelessWidget {
                     product.title,
                     style: GoogleFonts.mooli(
                       color: Colors.black,
-                      fontSize: 15,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

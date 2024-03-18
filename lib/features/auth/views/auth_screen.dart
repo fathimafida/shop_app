@@ -124,7 +124,7 @@ class AuthScreen extends StatelessWidget {
                           },
                           child: Text("Don't have an accounts?Sign up",
                               style: GoogleFonts.mooli(
-                                fontSize: 15,
+                                fontSize: 16,
                               ))),
                     ],
                   ),
