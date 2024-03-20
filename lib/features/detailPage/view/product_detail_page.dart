@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shop_app/common/models/product.dart';
+import 'package:shop_app/features/detailPage/widget/size_card.dart';
 
 class ProductDetailPage extends StatefulWidget {
   const ProductDetailPage({super.key, required this.product});
@@ -119,7 +120,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                         onPressed: () {},
                         child: Text("Add to Cart",
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 18,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                             )),
@@ -132,36 +133,6 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
           ),
         ),
       )),
-    );
-  }
-}
-
-class SizeCard extends StatelessWidget {
-  const SizeCard({
-    super.key,
-    required this.text,
-  });
-  final String text;
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          margin: EdgeInsets.only(right: 14),
-          padding: EdgeInsets.all(8),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(),
-          ),
-          child: Text(
-            text,
-            style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.black87),
-          ),
-        ),
-      ],
     );
   }
 }
