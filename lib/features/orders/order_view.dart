@@ -22,7 +22,7 @@ class OrderView extends StatelessWidget {
           title: Text("orderssss"),
         ),
         CircleAvatar(
-          radius: 80,
+          radius: 70,
         )
       ],
     ));
