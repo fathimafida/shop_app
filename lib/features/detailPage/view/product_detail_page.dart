@@ -68,7 +68,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,

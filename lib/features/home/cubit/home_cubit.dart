@@ -24,7 +24,6 @@ class HomeCubit extends Cubit<HomeState> {
       }
       emit(HomeLoaded(categoryList, productList));
     } on DioException catch (e) {
-      print(e);
       emit(HomeError(e.toString()));
     }
   }

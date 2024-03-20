@@ -18,7 +18,6 @@ class AuthCubit extends Cubit<AuthState> {
         emit(AuthError("Wrong email or password"));
       }
 
-      print(e);
       emit(AuthError(e.toString()));
     }
   }
