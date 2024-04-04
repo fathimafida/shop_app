@@ -19,12 +19,19 @@ class ProfileView extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 65,
+                  backgroundImage: AssetImage("assets/images/men3.jpg"),
                 ),
                 SizedBox(
                   height: 10,
                 ),
-                Text("Fathima fida"),
-                Text("20mcs@gmail.com"),
+                Text(
+                  "Alaxander john",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "20mcs@gmail.com",
+                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.normal),
+                ),
               ],
             ),
           ),
@@ -40,6 +47,7 @@ class ProfileView extends StatelessWidget {
               size: 20,
             ),
           ),
+          Divider(),
           ListTile(
             title: Text("Logout"),
             leading: Icon(Icons.logout),
@@ -48,6 +56,7 @@ class ProfileView extends StatelessWidget {
               size: 20,
             ),
           ),
+          Divider(),
           ListTile(
             title: Text("About"),
             leading: Icon(Icons.info),

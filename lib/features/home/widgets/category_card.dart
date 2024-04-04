@@ -36,14 +36,6 @@ class CategoryCard extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        Text(
-          category.creationAt,
-          style: GoogleFonts.mooli(
-            color: Colors.black,
-            fontSize: 12,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
       ],
     );
   }

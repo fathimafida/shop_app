@@ -58,7 +58,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                 ),
                 Text(widget.product.title,
                     style: GoogleFonts.mooli(
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.orangeAccent,
                     )),
@@ -67,9 +67,9 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                 ),
                 Text('Sizes',
                     style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                 SizedBox(
-                  height: 15,
+                  height: 12,
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
@@ -104,8 +104,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                 ),
                 Text(widget.product.description,
                     style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      fontWeight: FontWeight.normal,
                     )),
                 SizedBox(
                   height: 10,
@@ -114,7 +114,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                   children: [
                     Text('\$${widget.product.price}',
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold)),
+                            fontSize: 17, fontWeight: FontWeight.bold)),
                     Spacer(),
                     ElevatedButton(
                         onPressed: () {},

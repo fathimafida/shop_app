@@ -16,14 +16,29 @@ class OrderView extends StatelessWidget {
             ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Order"),
+              child: Row(
+                children: [
+                  Text("Order Id:"),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text("12345678"),
+                  Spacer(),
+                  Text("Status:"),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text("Delivered"),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Icon(
+                    Icons.check_circle,
+                    color: Colors.green,
+                  ),
+                ],
+              ),
             )),
-        ListTile(
-          title: Text("orderssss"),
-        ),
-        CircleAvatar(
-          radius: 70,
-        )
       ],
     ));
   }
