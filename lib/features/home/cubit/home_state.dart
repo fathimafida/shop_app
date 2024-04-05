@@ -1,22 +1,22 @@
-part of 'home_cubit.dart';
+// part of 'home_cubit.dart';
 
-sealed class HomeState {}
+// sealed class HomeState {}
 
-final class HomeInitial extends HomeState {}
+// final class HomeInitial extends HomeState {}
 
-final class HomeLoading extends HomeState {}
+// final class HomeLoading extends HomeState {}
 
-final class HomeLoaded extends HomeState {
-  final List<CategoryItem> categories;
-  final List<Product> products;
+// final class HomeLoaded extends HomeState {
+//   final List<CategoryItem> categories;
+//   final List<Product> products;
 
-  HomeLoaded(
-    this.categories,
-    this.products,
-  );
-}
+//   HomeLoaded(
+//     this.categories,
+//     this.products,
+//   );
+// }
 
-final class HomeError extends HomeState {
-  final String message;
-  HomeError(this.message);
-}
+// final class HomeError extends HomeState {
+//   final String message;
+//   HomeError(this.message);
+// }

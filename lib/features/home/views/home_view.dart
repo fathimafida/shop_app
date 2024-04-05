@@ -2,12 +2,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dio/dio.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shop_app/common/models/product.dart';
-import 'package:shop_app/features/home/cubit/home_cubit.dart';
 
 import 'package:shop_app/features/home/models/category.dart';
+import 'package:shop_app/features/home/models/product.dart';
 import 'package:shop_app/features/home/widgets/category_card.dart';
 import 'package:shop_app/features/home/widgets/trending_card.dart';
 
@@ -36,7 +35,7 @@ class _HomeViewState extends State<HomeView> {
         _isLoading = true;
       });
       final productResponse =
-          await Dio().get("https://fakestoreapi.com/products/");
+          await Dio().get("http://127.0.0.1:8000/api/products/");
 
       for (final product in productResponse.data) {
         productList.add(Product.fromJson(product));
@@ -85,7 +84,7 @@ class _HomeViewState extends State<HomeView> {
           ? const Center(child: CircularProgressIndicator())
           : RefreshIndicator(
               onRefresh: () async {
-                context.read<HomeCubit>().getHomedata();
+                // context.read<HomeCubit>().getHomedata();
               },
               child: CustomScrollView(
                 slivers: [

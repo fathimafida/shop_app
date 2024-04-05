@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shop_app/common/models/product.dart';
+
 import 'package:shop_app/features/detailPage/widget/size_card.dart';
+import 'package:shop_app/features/home/models/product.dart';
 
 class ProductDetailPage extends StatefulWidget {
   const ProductDetailPage({super.key, required this.product});
@@ -56,7 +57,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                 SizedBox(
                   height: 20,
                 ),
-                Text(widget.product.title,
+                Text(widget.product.name,
                     style: GoogleFonts.mooli(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,

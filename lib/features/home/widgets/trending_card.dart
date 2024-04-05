@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shop_app/common/models/product.dart';
+
 import 'package:shop_app/common/utils/helper.dart';
 import 'package:shop_app/features/detailPage/view/product_detail_page.dart';
+import 'package:shop_app/features/home/models/product.dart';
 
 class TrendCard extends StatelessWidget {
   const TrendCard({
@@ -55,7 +56,7 @@ class TrendCard extends StatelessWidget {
                   ),
                   SizedBox(height: 5),
                   Text(
-                    product.title,
+                    product.name,
                     style: GoogleFonts.mooli(
                       color: Colors.black,
                       fontSize: 16,
