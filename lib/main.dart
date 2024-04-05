@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => AuthCubit()),
-        // BlocProvider(create: (context) => HomeCubit()..getHomedata()),
+        BlocProvider(create: (context) => HomeCubit()..getHomedata()),
       ],
       child: MaterialApp(
         locale: DevicePreview.locale(context),
