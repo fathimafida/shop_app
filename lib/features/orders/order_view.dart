@@ -36,6 +36,9 @@ class OrderView extends StatelessWidget {
                     Icons.check_circle,
                     color: Colors.green,
                   ),
+                  SizedBox(
+                    height: 10,
+                  )
                 ],
               ),
             )),

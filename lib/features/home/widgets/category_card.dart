@@ -33,9 +33,6 @@ class CategoryCard extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(
-          height: 10,
-        ),
       ],
     );
   }

@@ -32,7 +32,7 @@ class _MainScreenState extends State<MainScreen> {
         backgroundColor: Colors.white,
         color: Colors.deepOrange,
         animationDuration: Duration(milliseconds: 500),
-        items: [
+        items: const [
           Icon(Icons.home, color: Colors.white),
           Icon(Icons.shopping_bag, color: Colors.white),
           Icon(Icons.person_outline_rounded, color: Colors.white),

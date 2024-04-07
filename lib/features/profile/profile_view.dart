@@ -65,6 +65,9 @@ class ProfileView extends StatelessWidget {
               size: 20,
             ),
           ),
+          SizedBox(
+            height: 10,
+          )
         ],
       ),
     ));
